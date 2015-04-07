@@ -1,13 +1,13 @@
 <div>
     <center>
     <form ng-submit="searchThesaurus(search)" class="loginDiv" ng-hide="addClient">
-        <input type="text" ng-model="search" autofocus="autofocus" placeholder="search">
+        <input type="text" ng-model="search" autofocus="autofocus" placeholder="search" required="true">
         <input type="submit" ng-click="addClient = true" class="btn btn-success" value="Search"/>
     </form>
     </center>
     <br/>
     <ul ng-repeat="student in students">
-        <li ng-repeat="noun in student.syn" ng-click="getItems(noun)">{{noun}}</li>
+        <li ng-repeat="noun in student.syn" ng-click="searchThesaurus(noun)">{{noun}}</li>
     </ul>
 
 </div>

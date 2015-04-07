@@ -26,16 +26,7 @@ scotchApp.config(function ($routeProvider) {
 
 // create the controller and inject Angular's $scope
 scotchApp.controller('mainController', function ($scope, $window, $http) {
-    // create a message to display in our view
-    $scope.searchThesaurus= function (item) {
-        $scope.greeting = item;
-        var url = "http://words.bighugelabs.com/api/2/a5660259832107069a17d6639b6b0a70/" + $scope.greeting + "/json";
-        $http.get(url).success(function (response) {
-            $scope.students = response;
-        });
-    };
-
-    $scope.getItems = function (item) {
+    $scope.searchThesaurus = function (item) {
         //$window.alert(item);
         var url = "http://words.bighugelabs.com/api/2/a5660259832107069a17d6639b6b0a70/" + item + "/json";
         $http.get(url).success(function (response) {
