@@ -40,5 +40,5 @@ scotchApp.controller('aboutController', function ($scope, $window, $http) {
 });
 
 scotchApp.controller('contactController', function ($scope, $window, $http) {
-    $scope.message = 'Look! I am an about page.';
+    $scope.message = 'Look! I am an Contact page.';
 });
